@@ -1,7 +1,9 @@
-import 'package:cj_app/widgets/servicesAndPricing_screen.dart';
+import 'package:cj_app/screens/services_pricing_screen.dart';
+import 'package:cj_app/screens/tour_services_screen.dart';
 import 'package:flutter/material.dart';
+import '../screens/portfolio_data_screen.dart';
 
-import '../models/grid_item.dart';
+import 'grid_item.dart';
 
 class GridScreen extends StatelessWidget {
   const GridScreen({super.key});
@@ -40,6 +42,18 @@ class GridScreen extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: ((context) => const TourServices()),
+                  ),
+                );
+              } else if (titles[index] == 'Services & Pricing') {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: ((context) => const ServicesAndPricingScreen()),
+                  ),
+                );
+              } else if (titles[index] == 'Portfolio') {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: ((context) => const PortfolioData()),
                   ),
                 );
               }

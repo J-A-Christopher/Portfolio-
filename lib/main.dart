@@ -1,7 +1,9 @@
-import 'package:cj_app/widgets/introScreen.dart';
+import 'package:cj_app/screens/introScreen.dart';
 import 'package:flutter/material.dart';
 import 'providers/tour_carousel_provider.dart';
 import 'package:provider/provider.dart';
+import './providers/services_pricing_provider.dart';
+import './providers/portfolio_provider.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -13,8 +15,18 @@ class MyApp extends StatelessWidget {
   // Future<Profile> getProfileData() async {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Tcarousel(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => Tcarousel(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ServicesProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => PortfolioRetrievedData(),
+        )
+      ],
       child: MaterialApp(
           theme: ThemeData(),
           debugShowCheckedModeBanner: false,

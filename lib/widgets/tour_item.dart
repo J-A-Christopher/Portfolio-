@@ -1,9 +1,4 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart';
 
 class TourItem extends StatelessWidget {
   final String pageTitle;
@@ -31,16 +26,16 @@ class TourItem extends StatelessWidget {
             ),
             FloatingActionButton(
               onPressed: () async {
-                final urlImage = imgUrl;
-                final url = Uri.parse(urlImage);
-                final response = await http.get(url);
-                final bytes = response.bodyBytes;
-                final temp = await getTemporaryDirectory();
-                final path = '${temp.path}/image.jpg';
-                File(path).writeAsBytesSync(bytes);
-                await Share.share(
-                  [path] as String,
-                );
+                // final urlImage = imgUrl;
+                // final url = Uri.parse(urlImage);
+                // final response = await http.get(url);
+                // final bytes = response.bodyBytes;
+                // final temp = await getTemporaryDirectory();
+                // final path = '${temp.path}/image.jpg';
+                // File(path).writeAsBytesSync(bytes);
+                // await Share.share(
+                //   [path] as String,
+                // );
               },
               backgroundColor: Colors.orange,
               child: const Icon(

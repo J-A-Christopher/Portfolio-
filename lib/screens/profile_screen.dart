@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'models/profile_model.dart';
+import '../models/profile_model.dart';
 import 'package:http/http.dart' as http;
-import 'widgets/profile_widget.dart';
+import '../widgets/profile_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

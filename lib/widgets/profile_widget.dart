@@ -44,7 +44,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 flex: 1,
                 child: Image.network(
                   'https://bensalcie.payherokenya.com/portal/images/${widget.usData.first.headerImage}',
-                  height: 104,
+                  height: 120,
                   fit: BoxFit.cover,
                 )),
           ],
