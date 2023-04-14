@@ -86,7 +86,7 @@ class _CrouselHandlerState extends State<CrouselHandler> {
         );
       }
       final images = notifier.images.take(5).toList();
-      print('Now:$images');
+      // print('Now:$images');
       return SafeArea(
         child: Stack(
           children: [

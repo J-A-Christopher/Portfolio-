@@ -20,7 +20,7 @@ class ServicesProvider extends ChangeNotifier {
         _isLoading = false;
         notifyListeners();
 
-        print('DataMoto: ${_servData.services!.first.title}');
+        // print('DataMoto: ${_servData.services!.first.title}');
       } else {
         _isLoading = false;
         notifyListeners();

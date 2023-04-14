@@ -1,9 +1,10 @@
-import 'package:cj_app/screens/introScreen.dart';
 import 'package:flutter/material.dart';
 import 'providers/tour_carousel_provider.dart';
 import 'package:provider/provider.dart';
 import './providers/services_pricing_provider.dart';
 import './providers/portfolio_provider.dart';
+import './screens/bottm_navigation_bar.dart';
+import './providers/notification_provider.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -25,12 +26,17 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => PortfolioRetrievedData(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => NotificationProvider(),
         )
       ],
       child: MaterialApp(
           theme: ThemeData(),
           debugShowCheckedModeBanner: false,
-          home: const IntroductionScreen()
+          home: const BottomNavBar()
+
+          // const IntroductionScreen()
 
           //  Scaffold(
           //     // appBar: AppBar(

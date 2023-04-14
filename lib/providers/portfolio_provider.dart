@@ -19,7 +19,7 @@ class PortfolioRetrievedData extends ChangeNotifier {
         _portData = PortfolioData.fromJson(jsonDecode(response.body));
         _isLoading = false;
         notifyListeners();
-        print('Noma${_portData.services?.first.image}');
+        // print('Noma${_portData.services?.first.image}');
       }
     } catch (error) {}
     return _portData;

@@ -16,7 +16,7 @@ class Tcarousel extends ChangeNotifier {
       var response = await http.get(
           Uri.parse('https://bensalcie.payherokenya.com/portal/api/tour.php'));
       // print("Reponse :${response.statusCode}");
-      print(jsonDecode(response.body));
+      // print(jsonDecode(response.body));
       if (response.statusCode == 200) {
         // _images = TourCarousel.fromJson(jsonDecode(response.body));
         // print("Reponse :${response.body}");
