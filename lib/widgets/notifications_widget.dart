@@ -23,11 +23,11 @@ class NotificationsWidget extends StatelessWidget {
             Expanded(
               child: Stack(
                 children: [
-                  Image.network(
-                    "${notifier.notifications.backimage}",
-                    fit: BoxFit.cover,
-                    height: 380,
-                  ),
+                  // Image.network(
+                  //   "${notifier.notifications.backimage}",
+                  //   fit: BoxFit.cover,
+                  //   height: 380,
+                  // ),
                   Positioned(
                     top: 80,
                     child: Row(
